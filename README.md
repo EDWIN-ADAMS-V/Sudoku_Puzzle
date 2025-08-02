@@ -18,7 +18,7 @@ A beautifully designed and fully functional Sudoku puzzle game built with **Reac
 
 ## 🚀 Demo
 
-👉 [Play Now on Netlify](https://your-custom-name.netlify.app)
+👉 [[Play Now on Netlify](https://your-custom-name.netlify.app)](https://sudoku-surge.netlify.app/)
 
 ## 🛠️ Technologies Used
 
