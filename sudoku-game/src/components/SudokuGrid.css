@@ -1,0 +1,17 @@
+.sudoku-grid {
+  display: inline-block;
+  margin: 2rem auto;
+  border: 2px solid #444;
+}
+
+.sudoku-row {
+  display: flex;
+}
+
+.sudoku-row:nth-child(3n) .cell {
+  border-bottom: 2px solid #444;
+}
+
+.cell:nth-child(3n) {
+  border-right: 2px solid #444;
+}

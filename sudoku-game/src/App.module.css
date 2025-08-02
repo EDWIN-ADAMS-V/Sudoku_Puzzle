@@ -1,0 +1,148 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: linear-gradient(145deg, #e0e0e0, #ffffff);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background: #4caf50;
+  color: white;
+  transform: scale(1.05);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(9, 40px);
+  grid-template-rows: repeat(9, 40px);
+  gap: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  border: 1px solid #bbb;
+  background-color: white;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.cell:focus {
+  border: 2px solid #4caf50;
+}
+
+.fixed {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  color: #333;
+  pointer-events: none;
+}
+
+.incorrect {
+  animation: shake 0.4s ease-in-out;
+  background-color: #ffdddd !important;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0px); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0px); }
+}
+
+.status {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #d32f2f;
+  min-height: 1.5rem;
+}
+
+/* Optional: 3x3 grid highlights (border styling for subgrids) */
+.subgridHighlight {
+  border: 1px solid #999;
+}
+
+.cell:nth-child(3n) {
+  border-right: 2px solid #333;
+}
+
+.grid input:nth-of-type(27n + 1),
+.grid input:nth-of-type(27n + 10),
+.grid input:nth-of-type(27n + 19) {
+  border-left: 2px solid #333;
+}
+
+.grid input:nth-child(n+19):nth-child(-n+27),
+.grid input:nth-child(n+46):nth-child(-n+54),
+.grid input:nth-child(n+73):nth-child(-n+81) {
+  border-bottom: 2px solid #333;
+}
+
+.grid input:nth-child(n+1):nth-child(-n+9),
+.grid input:nth-child(n+28):nth-child(-n+36),
+.grid input:nth-child(n+55):nth-child(-n+63) {
+  border-top: 2px solid #333;
+}
+
+/* Optional dark mode styles */
+.darkMode {
+  background-color: #121212;
+  color: #eee;
+}
+
+.darkMode .cell {
+  background-color: #1e1e1e;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+.darkMode .fixed {
+  background-color: #2d2d2d;
+  color: #aaa;
+}
+
+.darkMode .status {
+  color: #ef5350;
+}
+
+.darkMode .button {
+  background: #333;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+.darkMode .button:hover {
+  background: #4caf50;
+  color: white;
+}
