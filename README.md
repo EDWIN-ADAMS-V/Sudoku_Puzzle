@@ -2,7 +2,6 @@
 
 A beautifully designed and fully functional Sudoku puzzle game built with **React**, styled using **CSS Modules**, and enhanced with **Framer Motion** for smooth animations. This web app lets users test their logical skills with various difficulty levels, hints, validations, and more!
 
-![Sudoku Preview](https://user-images.githubusercontent.com/your-image-url/preview.png)
 
 ## 🌟 Features
 
